@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web_test</title>
+    <link rel="stylesheet" href="bootstrap-3.3/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+
+    <!-- [if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">
+        </script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+        </script>
+        <![endif] -->
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img src="images/hanger.jpeg" class="img-responsive" alt="Logo">
+                    <!-- <h1>FRESH ROYAL'S STORES</h1> -->
+                </a>
+                
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <button id="tweet" class="btn btn-default pull-right visible-xs-block" data-toggle="modal" data-target="#tweet-modal">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Tweet
+                </button>
+                <!-- <a class="btn btn-primary navbar-btn pull-left" href="#" role="button">Sign Up</a> -->
+            </div>
+            <div id="nav-menu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="badge">8</span>
+                            <span class="glyphicon glyphicon-bell"></span> Notifications</a>
+                    </li>
+                    <li><a href="#">
+                        <span class="badge">4</span>
+                        <span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
+                    <li class="visible-xs-inline">
+                        <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile</a>
+                    </li>
+                    <li class="visible-xs-inline">
+                        <a href="#"><span class="glyphicon glyphicon-off"></span> Logout</a>
+                    </li>
+                </ul>
+
+                <button id="tweet" class="btn btn-default pull-right hidden-xs">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Tweet
+                </button>
+
+                <div id="nav-options" class="btn-group pull-right hidden-xs">
+                    <button type="button" class="btn btn-default dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/cat_profile.jpeg" alt="">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="settings.html">Setting</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+
+                <form action="" method="POST" id="search" role="search" class="hidden-sm">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main content -->
+    <div class="container">
+        <div class="row">
+            <div id="profile" class="col-md-3 hidden-sm hidden-xs">
+                <div id="profile-resume" class="card">
+                    <img src="images/cat_fashion.jpeg" alt="whoo" class="card-img-top img-responsive">
+                    <div class="card-block">
+                        <img src="images/cat_cute.jpeg" alt="cutie" class="card-img">
+                        <h4 class="card-title">Sultan Adefemi <small>@sultanadefemi</small></h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit ducimus temporibus a doloremque quam natus. Necessitatibus recusandae ipsa magnam repellat ex ratione saepe esse alias sed accusantium, et voluptatibus!</p>
+                        
+                        <ul class="list-inline list-unstyled">
+                            <li id="card-tweets">
+                                <a href="#">
+                                    <span class="profile-stats">Tweets</span>
+                                    <span class="profile-value">99k</span>
+                                </a>
+                            </li>
+                            <li class="card-following">
+                                <a href="#">
+                                    <span class="profile-stats">Following</span>
+                                    <span class="profile-value">7</span>
+                                </a>
+                            </li>
+                            <li class="card-followers">
+                                <a href="#">
+                                    <span class="profile-stats">Followers</span>
+                                    <span class="profile-value">132k</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="profile-photo" class="card">
+                    <div class="card-header"> Photos</div>
+                    <div class="card-block">
+                        <ul class="list-inline list-unstyled">
+                            <li>
+                                <a href="#" class="thumbnail"><img src="images/cat_cute.jpeg" alt="cat_one" class="img-responsive"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="thumbnail"><img src="images/cat_profile.jpeg" alt="cat_two" class="img-responsive"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="thumbnail"><img src="images/cat_profile.jpeg" alt="cat_three" class="img-responsive"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="thumbnail"><img src="images/cat_cute.jpeg" alt="hanger" class="img-responsive"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main" class="col-sm-12 col-md-6">
+                <div class="alert alert-success" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                    <h3>Tweet alert</h3>
+                    Yay! You have made a new Tweet...
+                    <a href="#" class="alert-link">Click to review your tweets...</a>
+                </div>
+
+                <!-- progress bar -->
+                <div class="alert alert-info" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                    <h3>Posting your Tweets...</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="20" aria-valuemax="100" style="width: 25%;"></div>
+                    </div>
+                </div>
+
+                <ol class="breadcrumb card">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Feeds</a></li>
+                </ol>
+
+                <div id="main-card" class="card">
+                    <form action="" id="new-message">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="what's happening?">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                            </span>
+                        </div>
+                    </form>
+
+                    <ul id="feed" class="list-unstyled">
+                        <li>
+                            <img src="images/cat_cute.jpeg" alt="cutiee" class="feed-avatar img-circle">
+                            <div class="feed-post">
+                                <h5>Name <small>@namexxx - 3h</small></h5>
+                                <p>This is looking good. Thank God it's Friday Night...</p>
+                            </div>
+                            <div class="action-list">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                                </a>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                                    <span class="retweet-count">6</span>
+                                </a>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="images/cat_fashion.jpeg" alt="fash" class="feed-avatar img-circle">
+                            <div class="feed-post">
+                                <h5>Laika <small>@spaceX - 4h</small></h5>
+                                <p>Hurray! to Our Dear Elon Musk... My Hero.. Love you forever</p>
+                            </div>
+                            <div class="action-list">
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+                                </a>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                                    <span class="retweet-count">6</span>
+                                </a>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- pagination -->
+                <nav class="text-center">
+                    <ul class="pagination pagination-lg">
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="#">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li><a href="#">2</a></li>
+                        <li class="disabled"><a href="#">...</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="right-content" class="col-md-3 hidden-sm hidden-xs">
+                <div id="who-follow" class="card">
+                    <div class="card-header">
+                        Find Someone to Follow
+                    </div>
+                    <div class="card-block">
+                        <ul class="list-unstyled">
+                            <li>
+                                <img src="images/cat_profile.jpeg" alt="prof" class="img-rounded">
+                                <div class="info">
+                                    <strong>Cool.. Cats</strong>
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Follow
+                                    </button>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/cat_cute.jpeg" alt="soo_cute" class="img-rounded">
+                                <div class="info">
+                                    <strong>Cutie Cats...</strong>
+                                    <button class="btn btn-default">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Follow
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" id="app-info">
+                    <div class="card-block">&copy; 2020 HangerApp</div>
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Terms and Privacy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#">Connect with your Contact(s)...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="tweet-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Post a new tweet...</h4>
+                </div>
+                <div class="modal-body">
+                    <textarea name="modal-text" placeholder="What do you want to tweet" id="" cols="30" rows=""></textarea>
+                    <!-- <div class="row">
+                        <div class="col-sm-2">Use</div>
+                        <div class="col-sm-4">This</div>
+                        <div class="col-sm-6">Grid</div>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <span class="char-count pull-left" data-max="140">140</span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="jquery-3.5.1.js"></script>
+    <script src="bootstrap-3.3/js/bootstrap.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
